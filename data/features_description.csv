@@ -1,0 +1,147 @@
+INSTANCE_NAME,instance_name, instance file name
+VARS,vars,the number of variables
+BIN_VARS,bin_vars,number of binary variables
+INT_VARS,int_vars,number of integer variables
+CONT_VARS,cont_vars,number of continuous variables
+IMPLINT_VARS, implint_vars, number of implicit integer variables
+FIXED_VARS, fixed_vars, number of fixed integer variables
+TOTAL_OBJNONZERO_VARS,tot_objnonzero,number of variables with nonzero objective coefficients
+BIN_OBJNONZERO_VARS,bin_objnonzero,number of binary variables with nonzero objective coefficients relative to total number of binary variables
+INT_OBJNONZERO_VARS,int_objnonzero,number of integer variables with nonzero objective coefficients relative to total number of integer variables
+CONT_OBJNONZERO_VARS,cont_objnonzero,number of continuous variables with nonzero objective coefficients relative to total number of continuous variables
+IMPLINT_OBJNONZERO_VARS, implint_objnonzero, number of implicit intiger variables with nonzero objective coefficients relative to total number of continuous variables
+FIXED_OBJNONZERO_VARS, fixed_objnonzero, number of fixed variables with nonzero objective coefficients relative to total number of continuous variables
+PER_FINITE_UB,per_finit_upper,percent of finite variable upper bounds
+PER_FINITE_LB,per_finit_lower,percent of finite variable lower bounds
+UPPERBOUNDS_MEAN,ub_mean,mean over finite upper bounds of all variables
+UPPERBOUNDS_MIN,ub_min,minimum over finite upper bounds of all variables
+UPPERBOUNDS_MAX,ub_max,maximum over finite upper bounds of all variables
+UPPERBOUNDS_STD,ub_std,standard deviation over finite upper bounds of all variables
+UPPERBOUNDS_MEDIAN,ub_median,median over finite upper bounds of all variables
+UPPERBOUNDS_DENSITY,ub_density,density of finite upper bounds for all variables
+LOWERBOUNDS_MEAN,lb_mean,mean over finite lower bounds of all variables
+LOWERBOUNDS_MIN,lb_min,minimum over finite lower bounds of all variables
+LOWERBOUNDS_MAX,lb_max,maximum over finite lower bounds of all variables
+LOWERBOUNDS_STD,lb_std,standard deviation over finite lower bounds of all variables
+LOWERBOUNDS_MEDIAN,lb_median,median over finite lower bounds of all variables
+LOWERBOUNDS_DENSITY,lb_density,density of finite lower bounds for all variables
+BOUNDRANGE_MEAN,boundrange_mean,mean finite distance between upper and lower bounds
+BOUNDRANGE_MIN,boundrange_min,minimum finite distance between upper and lower bounds
+BOUNDRANGE_MAX,boundrange_max,maximum finite distance between upper and lower bounds
+BOUNDRANGE_STD,boundrange_std,standard deviation of finite distance between upper and lower bounds
+BOUNDRANGE_MEDIAN,boundrange_median,median finite distance between upper and lower bounds
+OBJECTIVE_DYNAMISM,obj_dyn,objective function dynamism
+OBJCOEFF_ALL_MEAN,objcoeff_all_mean,mean over the coefficients of all variables in the objective function
+OBJCOEFF_ALL_MIN,objcoeff_all_min,minimum over the coefficients of all variables in the objective function
+OBJCOEFF_ALL_MAX,objcoeff_all_max,maximum over the coefficients of all variables in the objective function
+OBJCOEFF_ALL_STD,objcoeff_all_std,standard deviation over the coefficients of all variables in the objective function
+OBJCOEFF_ALL_MEDIAN,objcoeff_all_median,median over the coefficients of all variables in the objective function
+OBJCOEFF_BIN_MEAN,objcoeff_bin_mean,mean over the coefficients of binary variables in the objective function
+OBJCOEFF_BIN_MIN,objcoeff_bin_min,minimum over the coefficients of binary variables in the objective function
+OBJCOEFF_BIN_MAX,objcoeff_bin_max,maximum over the coefficients of binary variables in the objective function
+OBJCOEFF_BIN_STD,objcoeff_bin_std,standard deviation over the coefficients of binary variables in the objective function
+OBJCOEFF_BIN_MEDIAN,objcoeff_bin_median,median over the coefficients of binary variables in the objective function
+OBJCOEFF_INT_MEAN,objcoeff_int_mean,mean over the coefficients of integer variables in the objective function
+OBJCOEFF_INT_MIN,objcoeff_int_min,minimum over the coefficients of integer variables in the objective function
+OBJCOEFF_INT_MAX,objcoeff_int_max,maximum over the coefficients of integer variables in the objective function
+OBJCOEFF_INT_STD,objcoeff_int_std,standard deviation over the coefficients of integer variables in the objective function
+OBJCOEFF_INT_MEDIAN,objcoeff_int_median,median over the coefficients of integer variables in the objective function
+OBJCOEFF_CONT_MEAN,objcoeff_cont_mean,mean over the coefficients of continuous variables in the objective function
+OBJCOEFF_CONT_MIN,objcoeff_cont_min,minimum over the coefficients of continuous variables in the objective function
+OBJCOEFF_CONT_MAX,objcoeff_cont_max,maximum over the coefficients of continuous variables in the objective function
+OBJCOEFF_CONT_STD,objcoeff_cont_std,standard deviation over the coefficients of continuous variables in the objective function
+OBJCOEFF_CONT_MEDIAN,objcoeff_cont_median,median over the coefficients of implicit integer variables in the objective function
+OBJCOEFF_IMPLINT_MEAN,objcoeff_implint_mean,mean over the coefficients of implicit integer variables in the objective function
+OBJCOEFF_IMPLINT_MIN,objcoeff_implint_min,minimum over the coefficients of implicit integer variables in the objective function
+OBJCOEFF_IMPLINT_MAX,objcoeff_implint_max,maximum over the coefficients of implicit integer variables in the objective function
+OBJCOEFF_IMPLINT_STD,objcoeff_implint_std,standard deviation over the coefficients of implicit integer variables in the objective function
+OBJCOEFF_IMPLINT_MEDIAN,objcoeff_implint_median,median over the coefficients of implicit integer variables in the objective function
+OBJCOEFF_FIXED_MEAN,objcoeff_fixed_mean,mean over the coefficients of fixed variables in the objective function
+OBJCOEFF_FIXED_MIN,objcoeff_fixed_min,minimum over the coefficients of fixed variables in the objective function
+OBJCOEFF_FIXED_MAX,objcoeff_fixed_max,maximum over the coefficients of fixed variables in the objective function
+OBJCOEFF_FIXED_STD,objcoeff_fixed_std,standard deviation over the coefficients of fixed variables in the objective function
+OBJCOEFF_FIXED_MEDIAN,objcoeff_fixed_median,median over the coefficients of fixed variables in the objective function
+CONSTR,constr,the number of constraints
+LINTOTAL_CONSTR,lintotal_constr, total number of classified linear constraints, may be different because of equations and/or ranged rows
+LINEMPTY_CONSTR, linempty_constr, number of linear constraints with no variables
+LINFREE_CONSTR, linfree_constr, number of linear constraints with no finite sides
+LINSING_CONSTR, linsing_constr, number of linear constraints with a single variable
+LINAGGR_CONSTR, linaggr_constr, number of linear aggregation constraints
+LINPREC_CONSTR, linprec_constr, number of linear precedence constraints
+LINVARBD_CONSTR, linvarbd_constr, number of linear varbound constraints
+LINSETPART_CONSTR, linsetpart_constr, number of linear set partition constraints
+LINSETPACK_CONSTR, linsetpack_constr, number of linear set packing constraints
+LINSETCOV_CONSTR, linsetcov_constr, number of linear set covering constraints
+LINCARD_CONSTR, lincard_constr, number of linear cardinality constraints
+LININVKNAP_CONSTR, lininvknap_constr, number of linear invknapsack constraints
+LINEQKNAP_CONSTR, lineqknap_constr, number of linear equality knapsack constraints
+LINBINPACK_CONSTR, linbinpack_constr, number of linear binpack constraints
+LINKNAPSACK_CONSTR, linknaps_constr, number of linear knapsack constraints
+LININTKNAPSACK_CONSTR, linintknap_constr, number of linear intknapsack constraints
+LINMIXBIN_CONSTR, linmixbin_constr, number of linear mixbina constraints
+LINGEN_CONSTR, lingen_constr, number of general linear constraints with no special structure
+CONSTR_MEAN,constr_mean,mean value of both right and left hand sides of all constraints
+CONSTR_MIN,constr_min,min value of both right and left hand sides of all constraints
+CONSTR_MAX,constr_max,max value of both right and left hand sides of all constraints
+CONSTR_STD,constr_std,standard deviation value of both right and left hand sides of all constraints
+CONSTR_MEDIAN,constr_median,median value of both right and left hand sides of all constraints
+RH_CONSTR_MEAN,rh_constr_mean,mean value of right hand side of all constraints
+RH_CONSTR_MIN,rh_constr_min,min value of right hand side of all constraints
+RH_CONSTR_MAX,rh_constr_max,sax value of right hand side of all constraints
+RH_CONSTR_STD,rh_constr_std,standard deviation value of right hand side of all constraints
+RH_CONSTR_MEDIAN,rh_constr_median,median value of right hand side of all constraints
+RH_CONSTR_DENSITY,rh_constr_density,density value of right hand side of all constraints
+LH_CONSTR_MEAN,lh_constr_mean,mean value of left hand side of all constraints
+LH_CONSTR_MIN,lh_constr_min,min value of left hand side of all constraints
+LH_CONSTR_MAX,lh_constr_max,max value of left hand side of all constraints
+LH_CONSTR_STD,lh_constr_std,standard deviation value of left hand side of all constraints
+LH_CONSTR_MEDIAN,lh_constr_median,median value of left hand side of all constraints
+LH_CONSTR_DENSITY,lh_constr_density,density value of left hand side of all constraints
+RANGED_ROWS,ranged_rows,number of ranged rows (linear inequality with two different sides)
+RH_CONSTR_RATIO,rh_constr_ratio,ratio of finite right constraint sides and total number of all constraints right and left hand sides
+LH_CONSTR_RATIO,lh_constr_ratio,ratio of finite left constraint sides and total number of all constraints right and left hand sides
+NVAR_ALL_MEAN,nvar_all_mean,mean value of number of variables for all linear constraints
+NVAR_ALL_MIN,nvar_all_min,min value of number of variables for all linear constraints
+NVAR_ALL_MAX,nvar_all_max,max value of number of variables for all linear constraints
+NVAR_ALL_STD,nvar_all_std,standard deviation value of number of variables for all linear constraints
+NVAR_ALL_MEDIAN,nvar_all_median,median value of number of variables for all linear constraints
+CONSTR_COEFF_MEAN_MEAN,constr_coeff_mean_mean,the mean of the vector computed from the mean over each abs(row) in the constraint matrix
+CONSTR_COEFF_MEAN_MIN,constr_coeff_mean_min,the min of the vector computed from the mean over each abs(row) in the constraint matrix
+CONSTR_COEFF_MEAN_MAX,constr_coeff_mean_max,the max of the vector computed from the mean over each abs(row) in the constraint matrix
+CONSTR_COEFF_MEAN_STD,constr_coeff_mean_std,the std of the vector computed from the mean over each abs(row) in the constraint matrix
+CONSTR_COEFF_MEAN_MEDIAN,constr_coeff_mean_median,the median of the vector computed from the mean over each abs(row) in the constraint matrix
+CONSTR_COEFF_MIN_MEAN,constr_coeff_min_mean,the mean of the vector computed from the min over each abs(row) in the constraint matrix
+CONSTR_COEFF_MIN_MIN,constr_coeff_min_min,the min of the vector computed from the min over each abs(row) in the constraint matrix
+CONSTR_COEFF_MIN_MAX,constr_coeff_min_max,the max of the vector computed from the min over each abs(row) in the constraint matrix
+CONSTR_COEFF_MIN_STD,constr_coeff_min_std,the std of the vector computed from the min over each abs(row) in the constraint matrix
+CONSTR_COEFF_MIN_MEDIAN,constr_coeff_min_median,the median of the vector computed from the min over each abs(row) in the constraint matrix
+CONSTR_COEFF_MAX_MEAN,constr_coeff_max_mean,the mean of the vector computed from the max over each abs(row) in the constraint matrix
+CONSTR_COEFF_MAX_MIN,constr_coeff_max_min,the min of the vector computed from the max over each abs(row) in the constraint matrix
+CONSTR_COEFF_MAX_MAX,constr_coeff_max_max,the max of the vector computed from the max over each abs(row) in the constraint matrix
+CONSTR_COEFF_MAX_STD,constr_coeff_max_std,the std of the vector computed from the max over each abs(row) in the constraint matrix
+CONSTR_COEFF_MAX_MEDIAN,constr_coeff_max_median,the median of the vector computed from the max over each abs(row) in the constraint matrix
+CONSTR_COEFF_STD_MEAN,constr_coeff_std_mean,the mean of the vector computed from the std over each abs(row) in the constraint matrix
+CONSTR_COEFF_STD_MIN,constr_coeff_std_min,the min of the vector computed from the std over each abs(row) in the constraint matrix
+CONSTR_COEFF_STD_MAX,constr_coeff_std_max,the max of the vector computed from the std over each abs(row) in the constraint matrix
+CONSTR_COEFF_STD_STD,constr_coeff_std_std,the std of the vector computed from the std over each abs(row) in the constraint matrix
+CONSTR_COEFF_STD_MEDIAN,constr_coeff_std_median,the median of the vector computed from the std over each abs(row) in the constraint matrix
+CONSTR_COEFF_RATIO_MEAN,constr_coeff_ratio_mean,the mean of the vector computed from the max/min over each abs(row) in the constraint matrix
+CONSTR_COEFF_RATIO_MIN,constr_coeff_ratio_min,the min of the vector computed from the max/min over each abs(row) in the constraint matrix
+CONSTR_COEFF_RATIO_MAX,constr_coeff_ratio_max,the max of the vector computed from the max/min over each abs(row) in the constraint matrix
+CONSTR_COEFF_RATIO_STD,constr_coeff_ratio_std,the std of the vector computed from the max/min over each abs(row) in the constraint matrix
+CONSTR_COEFF_RATIO_MEDIAN,constr_coeff_ratio_median,the median of the vector computed from the max/min over each abs(row) in the constraint matrix
+CONSTR_MATRIX_DENSITY,constr_matrix_density,constraint matrix density (calculated as number of all nonzero constraint coefficients / number of all constraint coefficients)
+NONZEROES,nonzeroes,total number of nonzero entries in the constraint matrix
+INDICATOR_CONSTR,indicator_constr,proportion of constraints belonging to the indicator constraint handler
+SOS_CONSTR,sos_constr,proportion of constraints belonging to the sos constraint handler
+OTHER_CONSTR,other_constr,proportion of constraints belonging to a constraint handler other than the linear, sos, or indicator
+CLIQUE_MEAN, clique_mean, mean value of clique vector
+CLIQUE_MIN, clique_min, min value of clique vector
+CLIQUE_MAX, clique_max, max value of clique vector
+CLIQUE_STD, clique_std, standard deviation of clique vector
+CLIQUE_MEDIAN, clique_median, median value of clique vector
+DYNAMISM_MEAN,dynamism_mean,dynamism (max log max/min absolute value of nonzero per constraint) mean
+DYNAMISM_MIN,dynamism_min,dynamism (max log max/min absolute value of nonzero per constraint) min
+DYNAMISM_MAX,dynamism_max,dynamism (max log max/min absolute value of nonzero per constraint) max
+DYNAMISM_STD,dynamism_std,dynamism (max log max/min absolute value of nonzero per constraint) std
+DYNAMISM_MEDIAN,dynamism_median,dynamism (max log max/min absolute value of nonzero per constraint) median

@@ -1,0 +1,6 @@
+,model,best_score,best_params
+3,et,0.7294117647058824,"{'max_depth': 5, 'n_estimators': 100}"
+0,svm,0.7205882352941178,"{'C': 1000, 'gamma': 0.0001}"
+1,rfm,0.7205882352941178,"{'max_depth': 10, 'n_estimators': 500}"
+2,lrm,0.7088235294117649,"{'C': 100, 'max_iter': 100}"
+4,nn,0.6823529411764706,"{'activation': 'relu', 'alpha': 0.01, 'hidden_layer_sizes': (5,), 'learning_rate_init': 0.1}"
