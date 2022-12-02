@@ -1,21 +1,20 @@
 #!/bin/bash
 
 #SBATCH --job-name=cp_outcome
-#SBATCH -p hpg-milan
+#SBATCH --partition=hpg-milan
 #SBATCH --account=akazachkov
 #SBATCH --qos=akazachkov-b
-#SBATCH --nodes=1                    # Use one node
-#SBATCH --ntasks=1                   # Run a single task        
-#SBATCH --cpus-per-task=64           # Number of CPU cores per task
-#SBATCH --mem=8gb                    # Total memory limit
-#SBATCH --time=2-00:00:00            # Time limit
+#SBATCH --ntasks=1                   # Number of tasks to run
+#SBATCH --cpus-per-task=1            # Number of CPU cores per task
+#SBATCH --mem=8gb                  # Total memory limit
+#SBATCH --time=06:00:00            # Time limit
+#SBATCH --array=1-426
 
 ##SBATCH --output=/blue/akazachkov/ambareesh.vaidya/cp_outcome/paper_log/output_%a-%A.log
-#SBATCH --output=output_%a-%A.log
+##SBATCH --output=slurm_log/output_%a-%A.log
+#SBATCH --output=slurm_%x_%A-%a.log  # standard output log (%x = job name, %A = job id, %a = array index)
 #SBATCH --mail-type=END,FAIL
 #SBATCH --mail-user=ambareesh.vaidya@ufl.edu
-
-#SBATCH --array=1-426
 
 pwd; hostname; date
 
@@ -58,6 +57,7 @@ fi
 PROJ_DIR="/home/ambareesh.vaidya/repos/cp_outcome"
 TYPE="solved"
 INSTANCE_FILE="$PROJ_DIR/data/$TYPE.instances"
+INSTANCE_DIR="/home/ambareesh.vaidya/miplib2017"
 CASE_NUM=`printf %04d $SLURM_ARRAY_TASK_ID`
 DATESTUB=`date +%F`
 RESULTS_DIR="/blue/akazachkov/ambareesh.vaidya/cp_outcome/paper/results/$DATESTUB"
@@ -76,15 +76,25 @@ for CUT_MODE in $CUTS; do
     mkdir -p $CURR_RESULT_DIR
 
     INST=$(sed -n "${SLURM_ARRAY_TASK_ID}p" $INSTANCE_FILE)
-
-    echo "Running task ${SLURM_ARRAY_JOB_ID}_${SLURM_ARRAY_TASK_ID} for instance $INST in parallel mode at `date` with results printed to $CURR_RESULT_DIR"
-    FILE="/home/ambareesh.vaidya/miplib2017/${INST}"
+    FILE="${INSTANCE_DIR}/${INST}"
     	
-    echo "Instance: ${INST}"
+    echo "`date`"
+    echo "Task: ${SLURM_ARRAY_JOB_ID}_${SLURM_ARRAY_TASK_ID}"
     echo "Case: ${CASE_NUM}"
-    echo "Cut mode: cut_${CUT_MODE}"
-    echo "Seed: seed_${SEED}"
-    python $EXECUTABLE --instance ${FILE} --cuts ${CUT_MODE} --result_path ${RESULT_DIR} --seed ${SEED}
+    echo "Instance: ${FILE}"
+    echo "Results: ${CURR_RESULT_DIR}"
+    echo "Cut mode: ${CUT_MODE}"
+    echo "Seed: ${SEED}"
 
+    CMD="srun python $EXECUTABLE --instance ${FILE} --cuts ${CUT_MODE} --result_path ${RESULT_DIR} --seed ${SEED}"
+    echo -e "Calling:\n$CMD"
+
+    echo "=== START JOB `date` ==="
+    eval $CMD
+    echo "=== END JOB `date` ==="
   done # loop over RANDOM_SEED
 done # loop over SEEDS
+
+#########################
+## END JOB
+echo "End task ${SLURM_ARRAY_JOB_ID}_${SLURM_ARRAY_TASK_ID} at `date`"
