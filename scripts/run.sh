@@ -86,7 +86,7 @@ for CUT_MODE in $CUTS; do
     echo "Cut mode: ${CUT_MODE}"
     echo "Seed: ${SEED}"
 
-    CMD="srun python $EXECUTABLE --instance ${FILE} --cuts ${CUT_MODE} --result_path ${RESULT_DIR} --seed ${SEED}"
+    CMD="python $EXECUTABLE --instance ${FILE} --cuts ${CUT_MODE} --result_path ${RESULT_DIR} --seed ${SEED}"
     echo -e "Calling:\n$CMD"
 
     echo "=== START JOB `date` ==="
