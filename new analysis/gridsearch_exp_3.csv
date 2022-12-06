@@ -3,4 +3,4 @@
 3,et,0.7294638694638695,"{'max_depth': 5, 'n_estimators': 500}"
 2,lrm,0.7264335664335665,"{'C': 10, 'max_iter': 100}"
 1,rfm,0.7172960372960373,"{'max_depth': 5, 'n_estimators': 100}"
-4,nn,0.6991608391608392,"{'activation': 'tanh', 'alpha': 0.01, 'hidden_layer_sizes': (15,), 'learning_rate_init': 0.1}"
+4,nn,0.6961305361305361,"{'activation': 'logistic', 'alpha': 0.01, 'hidden_layer_sizes': (15,), 'learning_rate_init': 0.1}"
