@@ -1,5 +1,5 @@
 ,model,best_score,best_params
-4,nn,0.6383682983682983,"{'activation': 'relu', 'alpha': 0.01, 'hidden_layer_sizes': (15,), 'learning_rate_init': 0.1}"
+4,nn,0.6503962703962703,"{'activation': 'relu', 'alpha': 0.01, 'hidden_layer_sizes': (15,), 'learning_rate_init': 0.1}"
 0,svm,0.6383216783216783,"{'C': 10, 'gamma': 0.0001}"
 3,et,0.6292307692307693,"{'max_depth': 5, 'n_estimators': 100}"
 1,rfm,0.6261538461538462,"{'max_depth': 10, 'n_estimators': 200}"
