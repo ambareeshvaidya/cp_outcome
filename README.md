@@ -13,9 +13,19 @@ We divide the implementation into three main steps:
 **General Pipeline**  
 For the data collection step we use the cluster present at the University of Florida. To submit and schedule jobs on the alloted cores run the bash scripts in the following sequence:
 
-`prepare_job_list.sh`: creates a `job_list.txt` file. Each line of this file contains the commands that we use to provide an input to the solver and path to store the output after the job completion.
-`run_job_list.sh`: actually runs each line of the `job_list.txt`. Note: configure the SBATCH commands according to your application.
+`prepare_job_list.sh`: creates a `job_list.txt` file. Each line of this file contains the commands that we use to provide an input to the solver and path to store the output after the job completion.  
+`run_job_list.sh`: actually runs each line of the `job_list.txt`. Note: configure the SBATCH commands according to your application.  
 `merge.sh`: compile all result/error csv files into one master results/error csv file.
 
-`fullrun_new.py`: runs a instance, seed and cuts parameter combination to extract information at predefined points during the resolution of the instance. Note: this step does not need to be run separately, it is executed when the `run_job_list.sh` script is run.
+`fullrun_new.py`: runs an instance, seed and cuts parameter combination to extract information at predefined points during the resolution of the instance. Note: this code does not need to be run exclusively, it is executed when the `run_job_list.sh` script is run.
+
+`Sets and ablation study.ipynb`: code and result for ablation study and creation of four data sets: `Set 1`, `Set 2`, `Set 1,2` and `Set 4` 
+
+`Experiment 1.ipynb`: machine learning experiment and results for `Set_1,2` using data extracted until before the root node starts processing. 
+`Experiment 2.ipynb`: machine learning experiment and results for `Set_1,2` using data extracted until after one round of cuts is generated and applied at the root node.  
+`Experiment 3.ipynb`: machine learning experiment and results for `Set_1,2` using features extracted until the end of the root node is reached.
+
+`Affected Instances Experiment 2.ipynb`: contains the code for further analysis of the result of experiment 2 and effects of weights on affected instances.
+`Miclassified visualization.ipynb`: a visualization code of the performance of the three ML experiments.
+
 
