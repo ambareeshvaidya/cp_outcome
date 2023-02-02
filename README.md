@@ -11,3 +11,11 @@ We divide the implementation into three main steps:
 * Machine Learning Experiments: we prepare the data to conduct three separate machine learning experiments
 
 **General Pipeline**  
+For the data collection step we use the cluster present at the University of Florida. To submit and schedule jobs on the alloted cores run the bash scripts in the following sequence:
+
+`prepare_job_list.sh`: creates a `job_list.txt` file. Each line of this file contains the commands that we use to provide an input to the solver and path to store the output after the job completion.
+`run_job_list.sh`: actually runs each line of the `job_list.txt`. Note: configure the SBATCH commands according to your application.
+`merge.sh`: compile all result/error csv files into one master results/error csv file.
+
+`fullrun_new.py`: runs a instance, seed and cuts parameter combination to extract information at predefined points during the resolution of the instance. Note: this step does not need to be run separately, it is executed when the `run_job_list.sh` script is run.
+
