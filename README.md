@@ -1,2 +1,2 @@
-# Cutting Plane Outcome on MIP instances
+To cut or not to cut, that is the quetsion
 
