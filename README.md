@@ -4,3 +4,10 @@ Cutting planes, or cuts, are a relaxation-tightening technique employed by mixed
 
 # Notes
 We use Python 3.8 and SCIP 8.0 with its python API PySCIPOpt 4.2.0. The `numpy` and `pandas` libraries are employed for data manipulation, all plotting is done with `matplotlib` and `seaborn` and we employ `scikit-learn` for the machine learning experiments.
+
+We divide the implementation into three main steps:
+* Data Collection: each instance is run with five different (consistent) random seeds once each by setting the cuts parameter to on/off. We extract vital information during the solving process using `callbacks` that have already been implemented in PySCIPOpt. This data as well as data available directly from the MIPLIB website is used to make the final features for each instance.
+* Ablation Study: once the data is compiled and cleaned for any irregularities we conduct the ablation study to determine the efficacy of the `cuts-on` setting.
+* Machine Learning Experiments: we prepare the data to conduct three separate machine learning experiments
+
+# General Pipeline  
